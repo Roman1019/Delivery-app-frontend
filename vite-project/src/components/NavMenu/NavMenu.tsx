@@ -9,11 +9,11 @@ export default function AuthNav() {
   return (
     <nav className={css.nav}>
       <div className={css.list}>
-        <NavLink className={getLinkStyle} to="/register">
-          Register
+        <NavLink className={getLinkStyle} to="/shop">
+          Shop
         </NavLink>
-        <NavLink className={getLinkStyle} to="/login">
-          Log in
+        <NavLink className={getLinkStyle} to="/shoppingCard">
+          Shopping Card
         </NavLink>
       </div>
     </nav>

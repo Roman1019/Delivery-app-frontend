@@ -1,0 +1,16 @@
+.ulList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  max-width: 250px;
+  padding: 10px 15px;
+}
+
+.buttonList {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 135px;
+}
