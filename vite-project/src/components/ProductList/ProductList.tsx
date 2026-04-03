@@ -18,7 +18,9 @@ export default function ProductList({ category }: Props) {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch("http://localhost:3000/products");
+      const res = await fetch(
+        "https://delivery-app-backend-kihi.onrender.com/",
+      );
       const data = await res.json();
 
       if (!Array.isArray(data)) {
