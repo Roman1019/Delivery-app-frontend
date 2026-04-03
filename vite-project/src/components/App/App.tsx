@@ -9,7 +9,7 @@ export default function App() {
       <NavMenu />
       <Routes>
         <Route path="/shop" element={<Shop />} />
-        <Route path="/shoppingCart" element={<ShoppingCard />} />
+        <Route path="/shoppingCard" element={<ShoppingCard />} />
       </Routes>
     </div>
   );
