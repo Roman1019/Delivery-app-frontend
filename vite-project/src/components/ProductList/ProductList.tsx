@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import css from "./ProductList.module.css";
 
 type Product = {
-  id: string;
+  _id: string;
   name: string;
   price: number;
   image: string;
@@ -30,8 +30,12 @@ export default function ProductList() {
   return (
     <div className={css.list}>
       {products.map((product) => (
-        <div key={product.id} className={css.card}>
-          <img src={product.image} alt={product.name} />
+        <div key={product._id} className={css.card}>
+          <img
+            className={css.imgProduct}
+            src={product.image}
+            alt={product.name}
+          />
           <h3>{product.name}</h3>
           <p>{product.price} грн</p>
         </div>
