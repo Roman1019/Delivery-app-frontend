@@ -1,31 +1,70 @@
-// import { NavLink } from "react-router-dom";
-// import css from "./NavMenu.module.css";
-// import clsx from "clsx";
+import { useState } from "react";
+import clsx from "clsx";
 import css from "./ShopList.module.css";
 
 export default function ShopList() {
-  //   const getLinkStyle = ({ isActive }: { isActive: boolean }) => {
-  //     return clsx(css.link, isActive && css.active);
-  //   };
+  const [active, setActive] = useState("burgers");
+
   return (
     <ul className={css.ulList}>
       <li>
-        <button className={css.buttonList}>Burgers</button>
+        <button
+          onClick={() => setActive("burgers")}
+          className={clsx(css.buttonList, active === "burgers" && css.active)}
+        >
+          Burgers
+        </button>
+      </li>
+
+      <li>
+        <button
+          onClick={() => setActive("wraps")}
+          className={clsx(css.buttonList, active === "wraps" && css.active)}
+        >
+          Wraps & Salads
+        </button>
+      </li>
+
+      <li>
+        <button
+          onClick={() => setActive("happy")}
+          className={clsx(css.buttonList, active === "happy" && css.active)}
+        >
+          Happy Meal
+        </button>
+      </li>
+
+      <li>
+        <button
+          onClick={() => setActive("Snack")}
+          className={clsx(css.buttonList, active === "Snack" && css.active)}
+        >
+          Snack Wrap
+        </button>
       </li>
       <li>
-        <button className={css.buttonList}>Wraps & Salads</button>
+        <button
+          onClick={() => setActive("meals")}
+          className={clsx(css.buttonList, active === "meals" && css.active)}
+        >
+          Extra Value Meals
+        </button>
       </li>
       <li>
-        <button className={css.buttonList}>Happy Meal</button>
+        <button
+          onClick={() => setActive("Breakfast")}
+          className={clsx(css.buttonList, active === "Breakfast" && css.active)}
+        >
+          Breakfast
+        </button>
       </li>
       <li>
-        <button className={css.buttonList}>McCafe</button>
-      </li>
-      <li>
-        <button className={css.buttonList}>McCafe</button>
-      </li>
-      <li>
-        <button className={css.buttonList}>McCafe</button>
+        <button
+          onClick={() => setActive("cafe")}
+          className={clsx(css.buttonList, active === "cafe" && css.active)}
+        >
+          McCafe
+        </button>
       </li>
     </ul>
   );
